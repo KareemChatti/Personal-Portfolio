@@ -1,0 +1,83 @@
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+.header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(15,26,50,0.6); border-bottom: 1px solid var(--border); z-index: 10; }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+.brand-title {
+  font-weight: 700;
+}
+.brand-sub { display: block; font-size: 12px; color: var(--muted); }
+.nav a {
+  margin-left: 16px;
+}
+.btn { background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%); color: #fff; padding: 10px 16px; border-radius: 10px; border: 1px solid transparent; box-shadow: 0 8px 24px rgba(99,102,241,0.25); cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn:hover { filter: brightness(1.05); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(99,102,241,0.35); }
+.btn-secondary { background: transparent; color: var(--text); border-color: var(--border); }
+.pill-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(99,102,241,0.35); background: rgba(11,18,32,0.6); color: var(--text); transition: all 0.25s ease; box-shadow: 0 6px 16px rgba(99,102,241,0.15); }
+.pill-btn:hover { border-color: var(--accent-2); color: var(--accent-2); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(99,102,241,0.25); }
+
+.hero { padding: 64px 0; background: transparent; }
+.hero-inner { display: flex; gap: 32px; align-items: center; animation: fadeInUp 0.8s ease-out; }
+.hero-text h1 { font-size: 56px; margin: 0 0 8px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-text p { margin: 0 0 16px; font-size: 20px; color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0 8px; }
+.hero-img { width: 190px; height: 190px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(99,102,241,0.4); box-shadow: 0 0 80px rgba(124,58,237,0.35); animation: fadeInDown 0.8s ease-out; }
+.location { color: #999; margin-top: 8px; }
+
+.section { padding: 56px 0; border-top: 1px solid rgba(99,102,241,0.15); animation: fadeInUp 0.6s ease-out; }
+.section:nth-child(even) { background: rgba(99,102,241,0.04); }
+.section-title { font-size: 28px; margin-bottom: 24px; text-align: center; color: var(--accent-2); }
+
+.about-intro { max-width: 800px; margin: 0 auto 32px; text-align: center; }
+.about-intro p { font-size: 16px; line-height: 1.8; color: var(--muted); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: linear-gradient(180deg, rgba(15,26,50,0.7) 0%, rgba(11,18,32,0.7) 100%); box-shadow: inset 0 0 0 1px rgba(99,102,241,0.12); cursor: pointer; transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1); }
+.card:hover { transform: scale(1.05) perspective(1200px) rotateX(5deg) rotateY(5deg); box-shadow: 0 20px 40px rgba(99,102,241,0.3), inset 0 0 0 1px rgba(99,102,241,0.25); }
+.card h3 { margin: 0 0 8px; }
+
+.list { display: grid; gap: 16px; }
+.item { border: 1px solid var(--border); border-radius: 16px; padding: 16px 16px 16px 48px; background: linear-gradient(180deg, rgba(15,26,50,0.7) 0%, rgba(11,18,32,0.7) 100%); position: relative; transition: all 0.35s ease; }
+.item:hover { transform: translateX(6px) scale(1.02); box-shadow: 0 18px 36px rgba(99,102,241,0.25); }
+.item::before { content: ''; position: absolute; left: 22px; top: 0; bottom: 0; width: 2px; background: rgba(99,102,241,0.25); border-radius: 2px; }
+.item::after { content: ''; position: absolute; left: 16px; top: 24px; width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--accent-2); background: rgba(124,58,237,0.2); box-shadow: 0 0 0 4px rgba(99,102,241,0.12); }
+.item-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.item-head h3 { margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.pill { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(99,102,241,0.3); color: var(--text); background: rgba(11,18,32,0.6); font-size: 13px; }
+.card .actions { display: flex; gap: 12px; margin-top: 12px; }
+.card .pill { border-color: rgba(99,102,241,0.25); }
+
+.skills-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.skill-card { border: 1px solid var(--border); border-radius: 16px; padding: 16px; background: rgba(15,26,50,0.6); box-shadow: inset 0 0 0 1px rgba(99,102,241,0.1); transition: all 0.3s ease; }
+.skill-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(99,102,241,0.18); }
+.skill-head { font-weight: 700; color: var(--accent-2); margin-bottom: 10px; }
+.skill-card ul { list-style: disc; padding-left: 18px; margin: 0; color: var(--muted); line-height: 1.6; }
+.skill-card li { margin-bottom: 4px; }
+
+.contact-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; border: 1px solid var(--border); border-radius: 16px; padding: 24px; background: linear-gradient(180deg, rgba(15,26,50,0.75) 0%, rgba(11,18,32,0.75) 100%); box-shadow: inset 0 0 0 1px rgba(99,102,241,0.15); }
+.contact-card-left h3 { margin: 0 0 8px; font-size: 22px; color: var(--accent-2); }
+.contact-card-left .muted { color: var(--muted); margin: 0 0 16px; }
+.contact-info { display: flex; flex-direction: column; gap: 10px; color: var(--muted); }
+.contact-card-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+.footer { padding: 24px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); }
+
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+  .hero-img { margin-bottom: 12px; }
+  .hero-text h1 { font-size: 42px; }
+  .contact-card { grid-template-columns: 1fr; }
+  .card:hover { transform: scale(1.02); }
+}
