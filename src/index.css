@@ -34,15 +34,14 @@ h1 { line-height: 1.1; }
 
 button { font-family: inherit; }
 
+/* Force dark theme on all devices */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    color-scheme: dark;
+    color: var(--text);
+    background:
+      radial-gradient(1200px 500px at 80% 70%, rgba(124,58,237,0.15) 0%, rgba(124,58,237,0) 60%),
+      radial-gradient(900px 400px at 10% 10%, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0) 55%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   }
 }

@@ -75,9 +75,149 @@ html { scroll-behavior: smooth; }
 .footer { padding: 24px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); }
 
 @media (max-width: 768px) {
-  .hero-inner { flex-direction: column; text-align: center; }
-  .hero-img { margin-bottom: 12px; }
-  .hero-text h1 { font-size: 42px; }
-  .contact-card { grid-template-columns: 1fr; }
-  .card:hover { transform: scale(1.02); }
+  /* Header & Navigation */
+  .header-inner {
+    flex-direction: column;
+    padding: 12px 0;
+    gap: 12px;
+  }
+  .brand {
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .nav a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 32px 0;
+  }
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  .hero-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 12px;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .hero-text p {
+    font-size: 18px;
+  }
+  .hero-actions {
+    justify-content: center;
+    gap: 8px;
+  }
+  .btn, .pill-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card {
+    padding: 16px;
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+  .card h3 {
+    font-size: 18px;
+  }
+  
+  /* Experience Items */
+  .item {
+    padding: 16px 16px 16px 32px;
+  }
+  .item::before {
+    left: 12px;
+  }
+  .item::after {
+    left: 6px;
+    width: 12px;
+    height: 12px;
+  }
+  .item-head h3 {
+    font-size: 16px;
+  }
+  .item-head span {
+    font-size: 13px;
+  }
+  .item:hover {
+    transform: translateX(4px) scale(1.01);
+  }
+  
+  /* Skills */
+  .skills-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .skill-card {
+    padding: 14px;
+  }
+  .skill-head {
+    font-size: 16px;
+  }
+  .skill-card ul {
+    font-size: 14px;
+  }
+  
+  /* Contact */
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .contact-card-left h3 {
+    font-size: 20px;
+  }
+  .contact-info {
+    font-size: 14px;
+  }
+  .contact-card-actions {
+    justify-content: center;
+  }
+  
+  /* Tags & Pills */
+  .tags {
+    gap: 6px;
+  }
+  .pill {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  /* About intro */
+  .about-intro p {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  /* Container padding */
+  .container {
+    padding: 0 20px;
+  }
 }
