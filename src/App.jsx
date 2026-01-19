@@ -1,5 +1,5 @@
 import './App.css'
-import karimImg from './assets/karim.jpg'
+import karimImg from './assets/karim.jpeg'
 
 function Header() {
   return (
