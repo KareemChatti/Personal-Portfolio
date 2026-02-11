@@ -28,7 +28,7 @@ function Hero() {
         <img className="hero-img" src={karimImg} alt="Abdelkarim Chatti" />
         <div className="hero-text">
           <h1>Abdelkarim Chatti</h1>
-          <p>Junior Web Developer</p>
+          <p>Data Analysis & Bi Student | Data Science enthusiast | Fullstack Web Developer</p>
           <div className="hero-actions">
             <a href="#projects" className="btn">View My Projects</a>
             <a href="#contact" className="btn btn-secondary">Contact Me</a>
