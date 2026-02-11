@@ -7,7 +7,7 @@ function Header() {
       <div className="container header-inner">
         <div className="brand">
           <span className="brand-title">Abdelkarim Chatti</span>
-          <span className="brand-sub">Junior Web Developer</span>
+          <span className="brand-sub">Data Analysis & Bi Student | Data Science enthusiast | Fullstack Web Developer</span>
         </div>
         <nav className="nav">
           <a href="#about">About</a>
